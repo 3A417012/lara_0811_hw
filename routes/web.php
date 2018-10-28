@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
+/*
 Route::get('/', ['as' => 'home.index', function () {
     return view('home');
 }]);
@@ -26,3 +27,8 @@ Route::get('/about', ['as' => 'about.index', function () {
 Route::get('/news', ['as' => 'news.index', function () {
     return view('news');
 }]);
+*/
+
+Route::get('/',['as'=>'home.index','uses'=>'Home@index']);
+Route::get('/about',['as'=>'about.index','uses'=>'About@index']);
+Route::get('/news',['as'=>'news.index','uses'=>'News@index']);
